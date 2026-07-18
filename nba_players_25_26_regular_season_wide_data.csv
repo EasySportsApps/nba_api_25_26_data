@@ -1,4 +1,4 @@
-season,season_type,player_id,player_name,team,position,height_m,weight_kg,country,age_completed_years,birthdate,experience,minutes_played,wins,losses,1_point_made,1_point_attempted,2_point_made,2_point_attempted,3_point_made,3_point_attempted,offensive_rebounds,defensive_rebounds,assists,turnovers,steals,blocks,personal_fouls
+season,season_type,player_id,player_name,team,position,height_m,weight_kg,country,age_completed_years,birthdate,experience,minutes_played,wins,losses,one_point_made,one_point_attempted,two_point_made,two_point_attempted,three_point_made,three_point_attempted,offensive_rebounds,defensive_rebounds,assists,turnovers,steals,blocks,personal_fouls
 2025-26,Regular Season,1630639,A.J. Lawson,TOR,G,1.981,81.2,Canada,25.0,2000-07-15,4,226.115,12,12,14,18,15,33,19,45,9,34,7,6,12,4,27
 2025-26,Regular Season,1631260,AJ Green,MIL,G,1.93,86.2,USA,26.0,1999-09-27,4,2269.9333333333334,31,47,53,62,30,64,232,554,29,184,152,75,39,8,179
 2025-26,Regular Season,1642358,AJ Johnson,DAL,G,1.956,72.6,USA,21.0,2004-12-01,2,453.43333333333334,9,39,34,40,45,119,12,57,14,41,47,30,11,3,30
