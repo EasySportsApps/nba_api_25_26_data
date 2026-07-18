@@ -1,5 +1,7 @@
 # 🏀 NBA API 25-26 Data
 
+🇬🇧 English | [🇪🇸 Español](README.es.md)
+
 Python scripts that pull NBA data straight from the official [`stats.nba.com`](https://www.nba.com/stats) API (via [`nba_api`](https://github.com/swar/nba_api)) and export clean, analysis-ready datasets in **CSV** and **Excel** format.
 
 ## 📦 What's inside
