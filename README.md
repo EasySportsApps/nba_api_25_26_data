@@ -68,6 +68,8 @@ A few things worth knowing:
 - The first run takes a few minutes, since bio data (height, birthdate, position...) is fetched player by player. It gets cached locally, so later runs are much faster.
 - Each script also saves an `.xlsx` version with some basic formatting, on top of the CSV.
 
-## 📄 License
+## ⚠️ About the data and how you can use it
 
-No license yet — open an issue if you'd like to use this data and need one added.
+This data comes from the NBA's official API (`stats.nba.com`) — it's not mine, I'm just collecting it and putting it here in a more convenient format. Its use is subject to the NBA's own terms and conditions, not mine.
+
+The scripts (`.py`) themselves are mine, and you're free to use, copy, or adapt them however you like.

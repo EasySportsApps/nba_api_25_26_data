@@ -68,6 +68,8 @@ Cosas que conviene saber:
 - La primera ejecución tarda unos minutos, porque los datos biográficos (altura, fecha de nacimiento, posición...) se piden jugador por jugador. Se quedan guardados en un caché local, así que las siguientes veces va mucho más rápido.
 - Cada script también guarda una versión en `.xlsx` con algo de formato, además del CSV.
 
-## 📄 Licencia
+## ⚠️ Sobre los datos y su uso
 
-Todavía no tiene licencia. Si quieres usar estos datos y necesitas que añada una, abre un issue y lo vemos.
+Estos datos vienen de la API oficial de la NBA (`stats.nba.com`) — no son de mi propiedad, solo los recopilo y los dejo aquí en un formato más cómodo de usar. Su uso está sujeto a los términos y condiciones de la NBA, no a los míos.
+
+El código de los scripts (`.py`) sí es mío, y puedes usarlo, copiarlo o adaptarlo libremente.
