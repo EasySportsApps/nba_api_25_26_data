@@ -25,7 +25,7 @@ One row per player for the 2025-26 Regular Season.
 Height and weight are in metric units on purpose, so you can calculate BMI or other ratios without converting anything.
 
 ### `nyk_players_25_26_playoffs_long_data.csv`
-One row per Knicks player, per playoff game — all 19 games, First Round through the Finals 🏆.
+One row per New York Knicks player, per playoff game — all 19 games, First Round through the Finals 🏆.
 
 - Long format, built for tracking game-by-game trends
 - Includes every player who showed up at least once, even for games they didn't play
