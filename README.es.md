@@ -25,7 +25,7 @@ Una fila por jugador de la Temporada Regular 2025-26.
 Altura y peso están en unidades métricas a propósito, para poder calcular el IMC u otros ratios sin convertir nada.
 
 ### `nyk_players_25_26_playoffs_long_data.csv`
-Una fila por jugador de los Knicks y partido de playoffs — los 19 partidos, desde la Primera Ronda hasta las Finales 🏆.
+Una fila por jugador de los New York Knicks y partido de playoffs — los 19 partidos, desde la Primera Ronda hasta las Finales 🏆.
 
 - Formato largo, pensado para ver la evolución partido a partido
 - Incluye a todos los jugadores que aparecieron en algún momento, aunque no jugaran en un partido concreto
