@@ -8,10 +8,10 @@ This repo has two NBA datasets (CSV) ready to use, plus the two Python scripts t
 
 | File | What it is |
 |---|---|
-| `nba_players_25_26_regular_season_wide_data.csv` | One row per player, 2025-26 Regular Season |
-| `nyk_players_25_26_playoffs_long_data.csv` | One row per Knicks player per playoff game, 2025-26 postseason |
-| `nba_players_25_26_regular_season_wide_data.py` | The script that generates the first CSV |
-| `nyk_players_25_26_playoffs_long_data.py` | The script that generates the second CSV |
+| `nba_players_regular_season_25_26_wide_data.csv` | One row per player, 2025-26 Regular Season |
+| `nyk_players_playoffs_25_26_long_data.csv` | One row per Knicks player per playoff game, 2025-26 postseason |
+| `nba_players_regular_25_26_season_wide_data.py` | The script that generates the first CSV |
+| `nyk_players_playoffs_25_26_long_data.py` | The script that generates the second CSV |
 
 ## 📊 The datasets
 
