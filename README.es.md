@@ -8,14 +8,14 @@ Este repo tiene dos datasets de la NBA (CSV) listos para usar, más los dos scri
 
 | Archivo | Qué es |
 |---|---|
-| `nba_players_25_26_regular_season_wide_data.csv` | Una fila por jugador, Temporada Regular 2025-26 |
-| `nyk_players_25_26_playoffs_long_data.csv` | Una fila por jugador de los Knicks y partido de playoffs, postemporada 2025-26 |
-| `nba_players_25_26_regular_season_wide_data.py` | El script que genera el primer CSV |
-| `nyk_players_25_26_playoffs_long_data.py` | El script que genera el segundo CSV |
+| `nba_players_regular_season_25_26_wide_data.csv` | Una fila por jugador, Temporada Regular 2025-26 |
+| `nyk_players_playoffs_25_26_long_data.csv` | Una fila por jugador de los Knicks y partido de playoffs, postemporada 2025-26 |
+| `nba_players_regular_season_25_26_wide_data.py` | El script que genera el primer CSV |
+| `nyk_players_playoffs_25_26_long_data.py` | El script que genera el segundo CSV |
 
 ## 📊 Los datasets
 
-### `nba_players_25_26_regular_season_wide_data.csv`
+### `nba_players_regular_season_25_26_wide_data.csv`
 Una fila por jugador de la Temporada Regular 2025-26.
 
 - 🧍 **Datos de identidad:** temporada, equipo, posición (siglas oficiales de la NBA), id y nombre del jugador
@@ -24,7 +24,7 @@ Una fila por jugador de la Temporada Regular 2025-26.
 
 Altura y peso están en unidades métricas a propósito, para poder calcular el IMC u otros ratios sin convertir nada.
 
-### `nyk_players_25_26_playoffs_long_data.csv`
+### `nyk_players_playoffs_25_26_long_data.csv`
 Una fila por jugador de los New York Knicks y partido de playoffs — los 19 partidos, desde la Primera Ronda hasta las Finales 🏆.
 
 - Formato largo, pensado para ver la evolución partido a partido
@@ -37,16 +37,16 @@ Puedes leer los dos CSV directamente desde GitHub, sin clonar nada.
 
 **En R:**
 ```r
-df_nba_wide_data <- read.csv("https://raw.githubusercontent.com/EasySportsApps/nba_api_25_26_data/refs/heads/main/nba_players_25_26_regular_season_wide_data.csv")
-df_nba_long_data <- read.csv("https://raw.githubusercontent.com/EasySportsApps/nba_api_25_26_data/refs/heads/main/nyk_players_25_26_playoffs_long_data.csv")
+df_r_nba_rs_2526 <- read.csv("https://raw.githubusercontent.com/EasySportsApps/nba_api_25_26_data/refs/heads/main/nba_players_regular_season_25_26_wide_data.csv")
+df_r_nyk_po_2526 <- read.csv("https://raw.githubusercontent.com/EasySportsApps/nba_api_25_26_data/refs/heads/main/nyk_players_playoffs_25_26_long_data.csv")
 ```
 
 **En Python:**
 ```python
 import pandas as pd
 
-df_nba_wide_data = pd.read_csv("https://raw.githubusercontent.com/EasySportsApps/nba_api_25_26_data/refs/heads/main/nba_players_25_26_regular_season_wide_data.csv")
-df_nba_long_data = pd.read_csv("https://raw.githubusercontent.com/EasySportsApps/nba_api_25_26_data/refs/heads/main/nyk_players_25_26_playoffs_long_data.csv")
+df_py_nba_rs_2526 = pd.read_csv("https://raw.githubusercontent.com/EasySportsApps/nba_api_25_26_data/refs/heads/main/nba_players_regular_season_25_26_wide_data.csv")
+df_py_nyk_po_2526 = pd.read_csv("https://raw.githubusercontent.com/EasySportsApps/nba_api_25_26_data/refs/heads/main/nyk_players_playoffs_25_26_long_data.csv")
 ```
 
 ## 🐍 Sobre los scripts
@@ -59,8 +59,8 @@ Si quieres volver a ejecutarlos:
 
 ```bash
 pip install nba_api pandas openpyxl
-python nba_players_25_26_regular_season_wide_data.py
-python nyk_players_25_26_playoffs_long_data.py
+python nba_players_regular_season_25_26_wide_data.py
+python nyk_players_playoffs_25_26_long_data.py
 ```
 
 Cosas que conviene saber:
