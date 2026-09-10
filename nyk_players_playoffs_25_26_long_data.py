@@ -1,5 +1,6 @@
 # https://www.nba.com/playoffs/2026
 
+import os # to check whether a cache file already exists
 import time # to pause briefly between per-game API calls
 import pandas as pd # for merging and organizing the dataframes
 from nba_api.stats.endpoints import teamgamelog # team-level game log, used to work out round/game number
@@ -7,8 +8,11 @@ from nba_api.stats.endpoints import boxscoretraditionalv3 # full per-game box sc
 from openpyxl import load_workbook # to re-open and format the saved xlsx
 from openpyxl.styles import Font, Alignment # to control font (bold) and alignment (centered)
 
+os.chdir(r"C:\Users\rhile\Desktop\Euncet\Analisis y Visualizacion de Datos\nba_api_25_26_data")
+
 SEASON = "2025-26" # season to query, used everywhere below
 SEASON_TYPE = "Playoffs" # we only want playoff games
+SEASON_TYPE_LABEL = "Play-offs" # display version of season type, used only in the output columns
 TEAM = "NYK" # New York Knicks (2025-26 NBA champions)
 TEAM_ID = 1610612752 # official nba.com team id for the Knicks
 
@@ -76,7 +80,7 @@ boxscore = pd.concat(boxscore_rows, ignore_index=True) # one row per Knicks play
 boxscore = boxscore.rename(columns={"personId": "PLAYER_ID"}) # V3 uses camelCase; standardize the id column name
 boxscore["PLAYER_NAME"] = boxscore["firstName"] + " " + boxscore["familyName"] # V3 splits the name into two fields
 boxscore["MINUTES_DECIMAL"] = boxscore["minutes"].apply(minutes_to_decimal) # convert to decimal minutes
-# comment is the NBA's own official DNP reason (e.g. "DNP - COACH'S DECISION"); blank/NaN means the player actually played
+# comment is the NBA's own official DNP reason (e.g. "DNP - Coach's Decision"); blank/NaN means the player actually played
 boxscore["STATUS"] = boxscore["comment"].apply(lambda c: c.strip() if isinstance(c, str) and c.strip() else "Yes")
 
 # --- Part C: build the full grid (every player who appeared at least once x all 19 games) ---
@@ -98,7 +102,7 @@ for stat_col in stat_cols:
 
 # --- Part D: add the constant columns and put everything in the requested order ---
 merged["SEASON"] = SEASON
-merged["SEASON_TYPE"] = SEASON_TYPE
+merged["SEASON_TYPE"] = SEASON_TYPE_LABEL
 merged["TEAM"] = TEAM
 
 players_long = merged.rename(columns={
@@ -117,9 +121,9 @@ print(players_long) # preview the dataframe in the terminal
 
 players_long.columns = players_long.columns.str.lower() # convert column headers to lowercase
 
-players_long.to_csv("nyk_players_25_26_playoffs_long_data.csv", index=False) # save as CSV, no row index column
+players_long.to_csv("nyk_players_playoffs_25_26_long_data.csv", index=False) # save as CSV, no row index column
 
-excel_path = "nyk_players_25_26_playoffs_long_data.xlsx" # define the Excel file path
+excel_path = "nyk_players_playoffs_25_26_long_data.xlsx" # define the Excel file path
 players_long.to_excel(excel_path, index=False, sheet_name="Playoffs") # save as Excel, no row index column
 
 # --- Custom Excel formatting starts here ---

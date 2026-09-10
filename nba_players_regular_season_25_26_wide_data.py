@@ -11,7 +11,7 @@ os.chdir(r"C:\Users\rhile\Desktop\Euncet\Analisis y Visualizacion de Datos\nba_a
 
 SEASON = "2025-26" # season to query, used everywhere below
 SEASON_TYPE = "Regular Season" # season type to query, used everywhere below
-SEASON_TYPE_LABEL = "Regular season" # display version of season type, used only in the output columns
+SEASON_TYPE_LABEL = "Regular Season" # display version of season type, used only in the output columns
 CACHE_FILE = "nba_players_regular_season_25_26_wide_data_cache.csv" # caches only the SLOW, stable data (bio + position + birthdate)
 
 # official NBA position acronyms, used to replace the long-form strings returned by commonplayerinfo
