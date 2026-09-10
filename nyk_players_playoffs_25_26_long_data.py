@@ -12,7 +12,7 @@ os.chdir(r"C:\Users\rhile\Desktop\Euncet\Analisis y Visualizacion de Datos\nba_a
 
 SEASON = "2025-26" # season to query, used everywhere below
 SEASON_TYPE = "Playoffs" # we only want playoff games
-SEASON_TYPE_LABEL = "Play-offs" # display version of season type, used only in the output columns
+SEASON_TYPE_LABEL = "Playoffs" # display version of season type, used only in the output columns
 TEAM = "NYK" # New York Knicks (2025-26 NBA champions)
 TEAM_ID = 1610612752 # official nba.com team id for the Knicks
 
