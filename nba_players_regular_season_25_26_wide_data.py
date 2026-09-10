@@ -7,9 +7,12 @@ from nba_api.stats.endpoints import commonplayerinfo # per-player info (position
 from openpyxl import load_workbook # to re-open and format the saved xlsx
 from openpyxl.styles import Font, Alignment # to control font (bold) and alignment (centered)
 
+os.chdir(r"C:\Users\rhile\Desktop\Euncet\Analisis y Visualizacion de Datos\nba_api_25_26_data")
+
 SEASON = "2025-26" # season to query, used everywhere below
 SEASON_TYPE = "Regular Season" # season type to query, used everywhere below
-CACHE_FILE = "nba_players_25_26_regular_season_wide_data_cache.csv" # caches only the SLOW, stable data (bio + position + birthdate)
+SEASON_TYPE_LABEL = "Regular season" # display version of season type, used only in the output columns
+CACHE_FILE = "nba_players_regular_season_25_26_wide_data_cache.csv" # caches only the SLOW, stable data (bio + position + birthdate)
 
 # official NBA position acronyms, used to replace the long-form strings returned by commonplayerinfo
 POSITION_ACRONYMS = {
@@ -91,7 +94,7 @@ merged = bio_merged.merge(stats_df, on="PLAYER_ID", how="left") # join on PLAYER
 
 # --- Part D: calculate derived columns (cheap, no API calls, safe to re-run anytime) ---
 merged["SEASON"] = SEASON # add season as its own column
-merged["SEASON_TYPE"] = SEASON_TYPE # add season type as its own column
+merged["SEASON_TYPE"] = SEASON_TYPE_LABEL # add season type as its own column
 merged["HEIGHT_M"] = (merged["PLAYER_HEIGHT_INCHES"] * 0.0254).round(3) # height in meters (for BMI calc in R later)
 merged["WEIGHT_KG"] = (merged["PLAYER_WEIGHT"].astype(float) * 0.453592).round(1) # weight from lb to kg
 current_season_start_year = int(SEASON[:4]) # e.g. 2025 from "2025-26"
@@ -129,9 +132,9 @@ print(players_data) # preview the dataframe in the terminal
 
 players_data.columns = players_data.columns.str.lower() # convert column headers to lowercase
 
-players_data.to_csv("nba_players_25_26_regular_season_wide_data.csv", index=False) # save as CSV, no row index column
+players_data.to_csv("nba_players_regular_season_25_26_wide_data.csv", index=False) # save as CSV, no row index column
 
-excel_path = "nba_players_25_26_regular_season_wide_data.xlsx" # define the Excel file path
+excel_path = "nba_players_regular_season_25_26_wide_data.xlsx" # define the Excel file path
 players_data.to_excel(excel_path, index=False, sheet_name="Players") # save as Excel, no row index column
 
 # --- Custom Excel formatting starts here ---
