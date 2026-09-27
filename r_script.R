@@ -1,5 +1,3 @@
-#### Solución Práctica 8 (r_script.R) ####
-
 #### Instalación paquetes R ####
 
 # Definir paquetes necesarios
