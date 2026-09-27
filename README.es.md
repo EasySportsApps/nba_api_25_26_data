@@ -1,4 +1,4 @@
-# 🏀 NBA API 25-26 Data
+# 🏀 NBA API 25-26 Data 
 
 [🇬🇧 English](README.md) | 🇪🇸 Español
 
