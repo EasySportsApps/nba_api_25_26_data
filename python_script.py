@@ -1,5 +1,3 @@
-#### Solución Práctica 8 (python_script.py) ####
-
 #### Importación paquetes y datos Python ####
 
 # Importar paquete pandas como pd
